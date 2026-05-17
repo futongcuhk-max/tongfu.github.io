@@ -8,176 +8,141 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --bg:#030c18;--surface:#071428;--surface2:#0d1f3c;
-  --border:#1a3860;--border2:#2a4f80;
-  --text:#ddeeff;--text2:#7a9cc0;--text3:#4a6a90;
-  --cyan:#00c8ff;--cyan2:#0088cc;--gold:#f0b030;--gold2:#c07810;
-}
+:root{--bg:#f5f7fa;--white:#fff;--surface:#eef1f6;--border:#d0d8e8;--border2:#b0bcd4;--text:#18243c;--text2:#4a5e7a;--text3:#8a9ab8;--navy:#0d1f3c;--blue:#0058cc;--blue2:#003d99;--teal:#007a8a;--gold:#c47800}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:'Source Sans 3',sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden}
-::selection{background:rgba(0,200,255,.25);color:#fff}
-::-webkit-scrollbar{width:4px}
-::-webkit-scrollbar-track{background:var(--bg)}
-::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
-
-/* ── NAV ── */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.1rem 3rem;display:flex;align-items:center;justify-content:space-between;background:rgba(3,12,24,.85);backdrop-filter:blur(18px);border-bottom:.5px solid rgba(26,56,96,.4)}
-.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--text);letter-spacing:.1em;text-decoration:none}
-.nav-logo span{color:var(--cyan)}
+::selection{background:rgba(0,88,204,.15)}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 3rem;display:flex;align-items:center;justify-content:space-between;background:rgba(245,247,250,.93);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--navy);letter-spacing:.08em;text-decoration:none}.nav-logo span{color:var(--blue)}
 .nav-links{display:flex;gap:2.5rem;list-style:none}
-.nav-links a{color:var(--text3);font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;transition:color .25s;font-family:'Space Mono',monospace}
-.nav-links a:hover,.nav-links a.on{color:var(--cyan)}
-
-/* ── HERO ── */
-#hero{position:relative;height:100vh;min-height:680px;display:flex;align-items:center;overflow:hidden}
-#canvas{position:absolute;inset:0;width:100%;height:100%}
-.hero-inner{position:relative;z-index:2;width:100%;padding:0 3rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;max-width:1200px;margin:0 auto}
-
-/* Left column */
-.hero-left{}
-.hero-tag{font-family:'Space Mono',monospace;font-size:.7rem;color:var(--cyan);letter-spacing:.22em;text-transform:uppercase;margin-bottom:1.4rem;display:flex;align-items:center;gap:.7rem;opacity:0;animation:fU .6s .3s forwards}
-.hero-tag::before{content:'';width:26px;height:1px;background:var(--cyan)}
-h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,6vw,5.5rem);font-weight:300;line-height:1.0;margin-bottom:1.2rem;opacity:0;animation:fU .7s .5s forwards}
-h1 em{font-style:italic;color:var(--cyan)}
-.hero-sub{font-size:.98rem;color:var(--text2);max-width:480px;line-height:1.9;margin-bottom:.7rem;opacity:0;animation:fU .7s .7s forwards}
-.hero-affil{font-family:'Space Mono',monospace;font-size:.68rem;color:var(--text3);letter-spacing:.08em;margin-bottom:2.2rem;opacity:0;animation:fU .7s .82s forwards}
+.nav-links a{color:var(--text3);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;transition:color .22s;font-family:'Space Mono',monospace}
+.nav-links a:hover,.nav-links a.on{color:var(--blue)}
+#hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;background:var(--white)}
+#canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.3}
+.hero-inner{position:relative;z-index:2;width:100%;padding:6rem 3rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;max-width:1200px;margin:0 auto}
+.hero-tag{font-family:'Space Mono',monospace;font-size:.68rem;color:var(--blue);letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.3rem;display:flex;align-items:center;gap:.7rem;opacity:0;animation:fU .6s .3s forwards}
+.hero-tag::before{content:'';width:24px;height:1px;background:var(--blue)}
+h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,6vw,5.5rem);font-weight:300;line-height:1.0;color:var(--navy);margin-bottom:1.2rem;opacity:0;animation:fU .7s .5s forwards}
+h1 em{font-style:italic;color:var(--blue)}
+.hero-sub{font-size:.98rem;color:var(--text2);max-width:480px;line-height:1.9;margin-bottom:.6rem;opacity:0;animation:fU .7s .7s forwards}
+.hero-affil{font-family:'Space Mono',monospace;font-size:.67rem;color:var(--text3);letter-spacing:.08em;margin-bottom:.35rem;opacity:0;animation:fU .7s .8s forwards}
 .hero-affil span{color:var(--gold)}
-.hero-btns{display:flex;gap:.85rem;flex-wrap:wrap;opacity:0;animation:fU .7s .96s forwards}
-.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.68rem 1.5rem;font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:all .25s;cursor:pointer;border:none;background:none}
-.bp{background:var(--cyan);color:#030c18;font-weight:700}
-.bp:hover{background:#4adaff;transform:translateY(-2px)}
-.bo{border:1px solid var(--border2);color:var(--text2)}
-.bo:hover{border-color:var(--cyan);color:var(--cyan);transform:translateY(-2px)}
-
-/* Right column — image mosaic */
-.hero-right{opacity:0;animation:fI 1s 1.1s forwards;position:relative}
-.img-mosaic{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:6px;width:100%}
-.img-tile{position:relative;overflow:hidden;border:1px solid rgba(26,56,96,.6);background:var(--surface);cursor:default}
-.img-tile img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;opacity:.88;transition:opacity .3s}
-.img-tile:hover img{opacity:1}
+.hero-idx{font-family:'Space Mono',monospace;font-size:.66rem;color:var(--text3);letter-spacing:.06em;margin-bottom:2rem;opacity:0;animation:fU .7s .85s forwards}
+.hero-btns{display:flex;gap:.8rem;flex-wrap:wrap;opacity:0;animation:fU .7s .96s forwards}
+.btn{display:inline-flex;align-items:center;gap:.45rem;padding:.65rem 1.4rem;font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:all .22s;cursor:pointer;border:none;background:none}
+.bp{background:var(--blue);color:#fff;font-weight:700}.bp:hover{background:var(--blue2);transform:translateY(-2px)}
+.bo{border:1px solid var(--border2);color:var(--text2)}.bo:hover{border-color:var(--blue);color:var(--blue);transform:translateY(-2px)}
+.hero-right{opacity:0;animation:fI 1s 1.1s forwards}
+.img-mosaic{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.img-tile{position:relative;overflow:hidden;border:1px solid var(--border);background:var(--surface)}
+.img-tile img{width:100%;height:100%;object-fit:cover;display:block;transition:opacity .3s}
+.img-tile:hover img{opacity:.9}
 .img-tile-wide{grid-column:1/3}
-.img-caption{position:absolute;bottom:0;left:0;right:0;padding:.5rem .75rem;background:linear-gradient(transparent,rgba(3,12,24,.85));font-family:'Space Mono',monospace;font-size:.58rem;color:var(--cyan);letter-spacing:.08em;text-transform:uppercase;line-height:1.4}
-.img-caption span{display:block;color:var(--text3);font-size:.54rem;margin-top:.15rem}
-.research-motto{margin-top:8px;padding:.75rem 1rem;border:1px solid var(--border);background:rgba(7,20,40,.6);font-family:'Cormorant Garamond',serif;font-size:.95rem;font-style:italic;color:var(--text2);line-height:1.6;text-align:center}
-.research-motto strong{color:var(--cyan);font-style:normal;font-weight:300}
-
-.scroll-h{position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:.5rem;opacity:0;animation:fI 1s 1.6s forwards}
-.scroll-h span{font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.18em;color:var(--text3);text-transform:uppercase}
-.scroll-ln{width:1px;height:38px;background:linear-gradient(to bottom,var(--border2),transparent);animation:sp 2s infinite}
-
-/* ── SECTIONS ── */
-.sw{padding:7rem 3rem;max-width:1100px;margin:0 auto}
-.sl{font-family:'Space Mono',monospace;font-size:.68rem;color:var(--cyan);letter-spacing:.24em;text-transform:uppercase;margin-bottom:.85rem;display:flex;align-items:center;gap:.65rem}
-.sl::before{content:'';width:16px;height:1px;background:var(--cyan)}
-h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;line-height:1.1;margin-bottom:3rem}
-h2 span{color:var(--cyan)}
+.img-cap{position:absolute;bottom:0;left:0;right:0;padding:.42rem .68rem;background:linear-gradient(transparent,rgba(13,31,60,.78));font-family:'Space Mono',monospace;font-size:.55rem;color:#c8d8f8;letter-spacing:.07em;text-transform:uppercase;line-height:1.4}
+.img-cap span{display:block;color:rgba(200,216,248,.62);font-size:.51rem;margin-top:.1rem}
+.hero-motto{margin-top:7px;padding:.68rem .92rem;border:1px solid var(--border);background:rgba(255,255,255,.75);font-family:'Cormorant Garamond',serif;font-size:.93rem;font-style:italic;color:var(--text2);line-height:1.6;text-align:center}
+.hero-motto strong{color:var(--blue);font-style:normal;font-weight:400}
+.sw{padding:6rem 3rem;max-width:1100px;margin:0 auto}
+.sl{font-family:'Space Mono',monospace;font-size:.67rem;color:var(--blue);letter-spacing:.22em;text-transform:uppercase;margin-bottom:.8rem;display:flex;align-items:center;gap:.6rem}
+.sl::before{content:'';width:14px;height:1px;background:var(--blue)}
+h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,3.5vw,3rem);font-weight:300;line-height:1.1;color:var(--navy);margin-bottom:2.8rem}
+h2 span{color:var(--blue)}
 hr.div{border:none;border-top:1px solid var(--border);margin:0}
-
-/* ── ABOUT ── */
-.ag{display:grid;grid-template-columns:1fr 300px;gap:4.5rem;align-items:start}
-.at p{color:var(--text2);margin-bottom:1.15rem;font-size:1rem;line-height:1.9}
+.ag{display:grid;grid-template-columns:1fr 290px;gap:4rem;align-items:start}
+.at p{color:var(--text2);margin-bottom:1.1rem;font-size:1rem;line-height:1.9}
 .at p strong{color:var(--text);font-weight:400}
-.stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-top:2.5rem;border:1px solid var(--border);background:var(--border)}
-.sb{background:var(--surface);padding:1.3rem;text-align:center}
-.sn{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:300;color:var(--cyan);line-height:1;display:block}
-.sk{font-family:'Space Mono',monospace;font-size:.58rem;color:var(--text3);letter-spacing:.15em;text-transform:uppercase;margin-top:.3rem;display:block}
-.ac{background:var(--surface);border:1px solid var(--border);padding:1.7rem}
-.pp{width:100%;aspect-ratio:1;background:var(--surface2);border:1px solid var(--border);margin-bottom:1.4rem;display:flex;align-items:center;justify-content:center;color:var(--text3);font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.12em}
-.pi h3{font-family:'Cormorant Garamond',serif;font-size:1.28rem;font-weight:400;color:var(--text);margin-bottom:.22rem}
+.cv-section{margin-top:1.8rem}
+.cv-title{font-family:'Space Mono',monospace;font-size:.64rem;color:var(--blue);letter-spacing:.15em;text-transform:uppercase;margin-bottom:.7rem;padding-bottom:.38rem;border-bottom:1px solid var(--border)}
+.cv-item{display:grid;grid-template-columns:auto 1fr;gap:.7rem 1.1rem;align-items:baseline;padding:.5rem 0;border-bottom:1px solid var(--border)}
+.cv-item:last-child{border-bottom:none}
+.cv-year{font-family:'Space Mono',monospace;font-size:.64rem;color:var(--text3);white-space:nowrap;letter-spacing:.04em}
+.cv-role{font-size:.9rem;color:var(--text);font-weight:400;line-height:1.5}
+.cv-where{font-size:.8rem;color:var(--text2);margin-top:.08rem}
+.cv-thesis{font-size:.76rem;color:var(--text3);margin-top:.08rem;font-style:italic}
+.about-card{background:var(--white);border:1px solid var(--border);padding:1.6rem;box-shadow:0 2px 12px rgba(0,0,0,.05)}
+.pp{width:100%;aspect-ratio:1;overflow:hidden;border:1px solid var(--border);margin-bottom:1.25rem}
+.pp img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.pi h3{font-family:'Cormorant Garamond',serif;font-size:1.28rem;font-weight:400;color:var(--navy);margin-bottom:.2rem}
 .pi p{font-size:.8rem;color:var(--text2);line-height:1.6}
-.pi .dp{color:var(--text3);font-size:.7rem;font-family:'Space Mono',monospace;margin-top:.28rem}
-.pls{display:flex;gap:.55rem;margin-top:1.25rem;flex-wrap:wrap}
-.pl{font-family:'Space Mono',monospace;font-size:.62rem;color:var(--text3);border:1px solid var(--border);padding:.3rem .65rem;text-decoration:none;letter-spacing:.08em;transition:all .22s;text-transform:uppercase}
-.pl:hover{color:var(--cyan);border-color:var(--cyan)}
-
-/* ── RESEARCH ── */
-.ig{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border)}
-.ic{background:var(--surface);padding:1.9rem 1.7rem;position:relative;overflow:hidden;transition:background .3s}
-.ic::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--cyan);transition:height .4s ease}
-.ic:hover{background:var(--surface2)}
-.ic:hover::before{height:100%}
-.in{font-family:'Space Mono',monospace;font-size:.62rem;color:var(--cyan);letter-spacing:.15em;margin-bottom:.9rem;opacity:.7}
-.ic h3{font-family:'Cormorant Garamond',serif;font-size:1.42rem;font-weight:400;color:var(--text);margin-bottom:.65rem}
+.pi .dp{color:var(--text3);font-size:.69rem;font-family:'Space Mono',monospace;margin-top:.22rem;letter-spacing:.04em}
+.pi-stat{display:grid;grid-template-columns:1fr 1fr;gap:.45rem;margin-top:.9rem}
+.ps{background:var(--bg);padding:.7rem;text-align:center;border:1px solid var(--border)}
+.ps-n{font-family:'Cormorant Garamond',serif;font-size:1.75rem;font-weight:300;color:var(--blue);line-height:1;display:block}
+.ps-k{font-family:'Space Mono',monospace;font-size:.53rem;color:var(--text3);letter-spacing:.1em;text-transform:uppercase;margin-top:.18rem;display:block}
+.pls{display:flex;gap:.48rem;margin-top:1.15rem;flex-wrap:wrap}
+.pl{font-family:'Space Mono',monospace;font-size:.61rem;color:var(--text2);border:1px solid var(--border);padding:.27rem .6rem;text-decoration:none;letter-spacing:.08em;transition:all .22s;text-transform:uppercase}
+.pl:hover{color:var(--blue);border-color:var(--blue)}
+.ig{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.ic{background:var(--white);border:1px solid var(--border);padding:1.75rem 1.55rem;position:relative;overflow:hidden;transition:box-shadow .3s,transform .3s}
+.ic:hover{box-shadow:0 4px 20px rgba(0,88,204,.1);transform:translateY(-3px)}
+.ic::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--blue);transform:scaleX(0);transition:transform .35s ease;transform-origin:left}
+.ic:hover::before{transform:scaleX(1)}
+.in{font-family:'Space Mono',monospace;font-size:.6rem;color:var(--blue);letter-spacing:.15em;margin-bottom:.82rem;opacity:.55}
+.ic h3{font-family:'Cormorant Garamond',serif;font-size:1.38rem;font-weight:400;color:var(--navy);margin-bottom:.6rem}
 .ic p{font-size:.86rem;color:var(--text2);line-height:1.78}
-.ii{width:100%;margin-top:1.2rem;border:1px solid var(--border);overflow:hidden;background:var(--bg)}
-.ii img{width:100%;height:165px;object-fit:cover;object-position:center;opacity:.82;transition:opacity .3s;display:block}
-.ic:hover .ii img{opacity:1}
-.tags{display:flex;flex-wrap:wrap;gap:.38rem;margin-top:1rem}
-.tg{font-family:'Space Mono',monospace;font-size:.58rem;padding:.2rem .52rem;border:1px solid var(--border2);color:var(--text3);letter-spacing:.06em}
-
-/* ── PUBLICATIONS ── */
-.pf{display:flex;gap:.48rem;margin-bottom:2.4rem;flex-wrap:wrap}
-.fb{font-family:'Space Mono',monospace;font-size:.65rem;padding:.36rem .88rem;border:1px solid var(--border);background:none;color:var(--text3);cursor:pointer;letter-spacing:.1em;text-transform:uppercase;transition:all .2s}
-.fb.on,.fb:hover{border-color:var(--cyan);color:var(--cyan)}
-.pub-list{display:flex;flex-direction:column;gap:1px;background:var(--border)}
-.pi-item{background:var(--surface);padding:1.5rem 1.9rem;display:grid;grid-template-columns:60px 1fr auto;gap:1.4rem;align-items:start;transition:background .25s;position:relative;overflow:hidden}
-.pi-item::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--cyan),transparent);opacity:0;transition:opacity .3s}
-.pi-item:hover{background:var(--surface2)}
-.pi-item:hover::after{opacity:.35}
-.py{font-family:'Space Mono',monospace;font-size:.68rem;color:var(--text3);padding-top:.16rem;letter-spacing:.04em}
-.pt{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--text);line-height:1.45;margin-bottom:.4rem}
-.pa{font-size:.78rem;color:var(--text2);margin-bottom:.32rem;line-height:1.5}
-.pa strong{color:var(--gold);font-weight:600}
-.pv{font-size:.72rem;font-family:'Space Mono',monospace;color:var(--cyan2);letter-spacing:.04em;line-height:1.5}
-.pb-wrap{display:flex;flex-wrap:wrap;gap:.38rem;margin-top:.6rem;align-items:center}
-.pb{font-family:'Space Mono',monospace;font-size:.56rem;padding:.16rem .48rem;letter-spacing:.08em;text-transform:uppercase;border:1px solid}
-.b-prl{border-color:#5588cc;color:#88aaee}
-.b-nl{border-color:#d07030;color:#f09050}
-.b-acs{border-color:var(--gold2);color:var(--gold)}
-.b-oe{border-color:#5a8a5a;color:#88cc88}
-.b-pra{border-color:#6655aa;color:#aa88ee}
-.b-adv{border-color:#cc6655;color:#ee9988}
-.b-jpc{border-color:#507888;color:#80b8cc}
-.b-oc{border-color:#608050;color:#90c078}
-.b-jpd{border-color:#705888;color:#a888cc}
-.b-hi{border-color:var(--cyan);color:var(--cyan);background:rgba(0,200,255,.07)}
-.lks{display:flex;flex-direction:column;gap:.38rem;padding-top:.08rem}
-.lk{font-family:'Space Mono',monospace;font-size:.6rem;color:var(--text3);text-decoration:none;border:1px solid var(--border);padding:.26rem .58rem;letter-spacing:.08em;text-transform:uppercase;transition:all .2s;white-space:nowrap;text-align:center}
-.lk:hover{color:var(--cyan);border-color:var(--cyan)}
-
-/* ── CONTACT ── */
+.ii{width:100%;margin-top:1.1rem;border:1px solid var(--border);overflow:hidden}
+.ii img{width:100%;height:152px;object-fit:cover;object-position:center;display:block;transition:transform .4s ease}
+.ic:hover .ii img{transform:scale(1.03)}
+.tags{display:flex;flex-wrap:wrap;gap:.33rem;margin-top:.88rem}
+.tg{font-family:'Space Mono',monospace;font-size:.57rem;padding:.17rem .48rem;border:1px solid var(--border2);color:var(--text3);letter-spacing:.06em}
+.pf{display:flex;gap:.44rem;margin-bottom:2.2rem;flex-wrap:wrap}
+.fb{font-family:'Space Mono',monospace;font-size:.63rem;padding:.32rem .82rem;border:1px solid var(--border);background:none;color:var(--text3);cursor:pointer;letter-spacing:.1em;text-transform:uppercase;transition:all .2s}
+.fb.on,.fb:hover{border-color:var(--blue);color:var(--blue);background:rgba(0,88,204,.05)}
+.pub-list{display:flex;flex-direction:column}
+.pi-item{background:var(--white);border:1px solid var(--border);border-top:none;padding:1.3rem 1.7rem;display:grid;grid-template-columns:58px 1fr auto;gap:1.25rem;align-items:start;transition:background .2s}
+.pi-item:first-child{border-top:1px solid var(--border)}
+.pi-item:hover{background:var(--bg)}
+.py{font-family:'Space Mono',monospace;font-size:.66rem;color:var(--text3);padding-top:.13rem;letter-spacing:.04em;line-height:1.5}
+.pt{font-family:'Cormorant Garamond',serif;font-size:1.12rem;font-weight:400;color:var(--navy);line-height:1.45;margin-bottom:.36rem}
+.pa{font-size:.78rem;color:var(--text2);margin-bottom:.28rem;line-height:1.5}
+.pa strong{color:var(--navy);font-weight:600}
+.pa em{color:var(--text3);font-style:normal}
+.pv{font-size:.71rem;font-family:'Space Mono',monospace;color:var(--blue);letter-spacing:.04em;line-height:1.5}
+.pb-wrap{display:flex;flex-wrap:wrap;gap:.33rem;margin-top:.52rem;align-items:center}
+.pb{font-family:'Space Mono',monospace;font-size:.54rem;padding:.13rem .44rem;letter-spacing:.08em;text-transform:uppercase;border:1px solid}
+.b-prl{border-color:#3366aa;color:#2255aa;background:rgba(51,102,170,.06)}
+.b-nl{border-color:#b05820;color:#904010;background:rgba(144,64,16,.06)}
+.b-acs{border-color:#b07800;color:#905800;background:rgba(144,88,0,.06)}
+.b-oe{border-color:#2a7a3a;color:#1a6a2a;background:rgba(26,106,42,.06)}
+.b-pra{border-color:#5544aa;color:#4433aa;background:rgba(68,51,170,.06)}
+.b-adv{border-color:#aa4433;color:#993322;background:rgba(153,51,34,.06)}
+.b-jpc{border-color:#2277aa;color:#1166aa;background:rgba(17,102,170,.06)}
+.b-oc{border-color:#447744;color:#336633;background:rgba(51,102,51,.06)}
+.b-jpd{border-color:#774488;color:#663377;background:rgba(102,51,119,.06)}
+.b-carbon{border-color:#444;color:#333;background:rgba(51,51,51,.06)}
+.b-nano{border-color:#008888;color:#006666;background:rgba(0,102,102,.06)}
+.b-ne{border-color:#006666;color:#004444;background:rgba(0,68,68,.06)}
+.b-ol{border-color:#005588;color:#004477;background:rgba(0,68,119,.06)}
+.b-arxiv{border-color:#aa2200;color:#991100;background:rgba(153,17,0,.06)}
+.b-hi{border-color:var(--blue);color:var(--blue);background:rgba(0,88,204,.07)}
+.b-co{border-color:var(--teal);color:var(--teal);background:rgba(0,122,138,.07)}
+.lks{display:flex;flex-direction:column;gap:.33rem;padding-top:.05rem}
+.lk{font-family:'Space Mono',monospace;font-size:.59rem;color:var(--text3);text-decoration:none;border:1px solid var(--border);padding:.22rem .52rem;letter-spacing:.08em;text-transform:uppercase;transition:all .2s;white-space:nowrap;text-align:center}
+.lk:hover{color:var(--blue);border-color:var(--blue)}
 .cc{text-align:center}
-.cc .sl{justify-content:center}
-.cc .sl::before{display:none}
-.cs{color:var(--text2);max-width:450px;margin:0 auto 2.4rem;line-height:1.85;font-size:.98rem}
-.ce{font-family:'Cormorant Garamond',serif;font-size:clamp(1.45rem,3vw,2.3rem);font-weight:300;color:var(--text);text-decoration:none;letter-spacing:.04em;border-bottom:1px solid var(--border);padding-bottom:.32rem;transition:all .3s;display:inline-block}
-.ce:hover{color:var(--cyan);border-color:var(--cyan)}
-.soc{display:flex;justify-content:center;gap:1.1rem;margin-top:2.4rem;flex-wrap:wrap}
-.sc{font-family:'Space Mono',monospace;font-size:.64rem;color:var(--text3);text-decoration:none;letter-spacing:.1em;text-transform:uppercase;display:flex;align-items:center;gap:.42rem;padding:.52rem 1.05rem;border:1px solid var(--border);transition:all .25s}
-.sc:hover{color:var(--cyan);border-color:var(--cyan);transform:translateY(-2px)}
+.cc .sl{justify-content:center}.cc .sl::before{display:none}
+.cs{color:var(--text2);max-width:440px;margin:0 auto 2.2rem;line-height:1.85;font-size:.97rem}
+.ce{font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,3vw,2.2rem);font-weight:300;color:var(--navy);text-decoration:none;letter-spacing:.04em;border-bottom:1px solid var(--border);padding-bottom:.28rem;transition:all .3s;display:inline-block}
+.ce:hover{color:var(--blue);border-color:var(--blue)}
+.soc{display:flex;justify-content:center;gap:.9rem;margin-top:2.2rem;flex-wrap:wrap}
+.sc{font-family:'Space Mono',monospace;font-size:.61rem;color:var(--text2);text-decoration:none;letter-spacing:.1em;text-transform:uppercase;display:flex;align-items:center;gap:.38rem;padding:.48rem .95rem;border:1px solid var(--border);transition:all .22s;background:var(--white)}
+.sc:hover{color:var(--blue);border-color:var(--blue);transform:translateY(-2px)}
 .sc svg{width:13px;height:13px;fill:currentColor;flex-shrink:0}
-
-footer{padding:1.8rem 3rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto}
-.fl{font-family:'Cormorant Garamond',serif;font-size:.88rem;color:var(--text3)}
-.fr{font-family:'Space Mono',monospace;font-size:.6rem;color:var(--text3);letter-spacing:.08em}
-.fr span{color:var(--cyan)}
-
-.rv{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+footer{padding:1.5rem 3rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto;background:var(--white)}
+.fl{font-family:'Cormorant Garamond',serif;font-size:.86rem;color:var(--text3)}
+.fr{font-family:'Space Mono',monospace;font-size:.59rem;color:var(--text3);letter-spacing:.08em}
+.fr span{color:var(--blue)}
+.rv{opacity:0;transform:translateY(20px);transition:opacity .55s ease,transform .55s ease}
 .rv.vis{opacity:1;transform:none}
-.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
-
-@keyframes fU{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}
+@keyframes fU{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 @keyframes fI{from{opacity:0}to{opacity:1}}
-@keyframes sp{0%,100%{opacity:.3;transform:scaleY(.5)}50%{opacity:1;transform:scaleY(1)}}
-
-@media(max-width:1000px){
-  .hero-inner{grid-template-columns:1fr;gap:2rem}
-  .hero-right{display:none}
-}
-@media(max-width:900px){
-  nav{padding:1rem 1.5rem}.nav-links{gap:1.5rem}
-  .sw{padding:5rem 1.5rem}
-  .ag{grid-template-columns:1fr;gap:2.5rem}.ac{order:-1}
-  .ig{grid-template-columns:1fr}
-  footer{flex-direction:column;gap:.6rem;text-align:center;padding:1.5rem}
-  .pi-item{grid-template-columns:1fr;gap:.5rem}.lks{flex-direction:row;flex-wrap:wrap}
-  h1{font-size:clamp(2.5rem,9vw,3.8rem)}.hero-inner{padding:0 1.5rem}
-}
+@media(max-width:1000px){.hero-inner{grid-template-columns:1fr}.hero-right{display:none}}
+@media(max-width:880px){nav{padding:.9rem 1.5rem}.nav-links{gap:1.3rem}.sw{padding:4.5rem 1.5rem}.ag{grid-template-columns:1fr;gap:2rem}.about-card{order:-1}.ig{grid-template-columns:1fr}footer{flex-direction:column;gap:.5rem;text-align:center}.pi-item{grid-template-columns:1fr;gap:.4rem}.lks{flex-direction:row;flex-wrap:wrap}}
 </style>
 </head>
 <body>
-
 <nav id="topnav">
   <a href="#hero" class="nav-logo">TF<span>.</span></a>
   <ul class="nav-links">
@@ -188,96 +153,90 @@ footer{padding:1.8rem 3rem;border-top:1px solid var(--border);display:flex;justi
   </ul>
 </nav>
 
-<!-- HERO -->
 <section id="hero">
   <canvas id="canvas"></canvas>
   <div class="hero-inner">
-
-    <!-- Left -->
     <div class="hero-left">
-      <div class="hero-tag">Nanophotonics · Topological Photonics · Spin Photonics</div>
+      <div class="hero-tag">Nanophotonics &middot; Topological Photonics &middot; Spin Photonics</div>
       <h1>Tong<br><em>Fu</em></h1>
-      <p class="hero-sub">Exploring the topological and spin properties of light at the nanoscale — from real-space spin Chern numbers to polarization singularities in near-field optics.</p>
-      <p class="hero-affil">Ph.D. Researcher · Dept. of Physics · <span>City University of Hong Kong</span></p>
+      <p class="hero-sub">Exploring the topological and spin properties of light at the nanoscale &mdash; from real-space spin Chern numbers to polarization singularities in near-field optics.</p>
+      <p class="hero-affil">Postdoctoral Researcher &middot; Dept. of Physics &middot; <span>City University of Hong Kong</span></p>
+      <p class="hero-idx">Google Scholar: h-index 14 &middot; i10-index 20 &middot; ORCID: 0000-0001-7669-6903</p>
       <div class="hero-btns">
         <a href="#publications" class="btn bp">View Publications</a>
         <a href="https://scholar.google.com/citations?user=cmI1r9sAAAAJ" target="_blank" class="btn bo">Google Scholar</a>
         <a href="#contact" class="btn bo">Contact</a>
       </div>
     </div>
-
-    <!-- Right: Image Mosaic -->
     <div class="hero-right">
       <div class="img-mosaic">
-        <!-- Top wide: ACS Photonics dark spots -->
-        <div class="img-tile img-tile-wide" style="height:200px">
-          <img src="TOC01.png" alt="Topological dark spots on metal sphere" style="object-position:center 30%">
-          <div class="img-caption">
-            Topological Dark Spots · Electric Near Field
-            <span>ACS Photonics 2024 · Rising Stars in Photonics</span>
-          </div>
+        <div class="img-tile img-tile-wide" style="height:196px">
+          <img src="TOC01.png" alt="Topological dark spots" style="object-position:center 30%">
+          <div class="img-cap">Topological Dark Spots &middot; Electric Near Field<span>ACS Photonics 2024 &middot; Rising Stars in Photonics</span></div>
         </div>
-        <!-- Bottom left: Spin Chern torus -->
-        <div class="img-tile" style="height:165px">
-          <img src="spinchernnumber_orig.png" alt="Spin Chern number on torus">
-          <div class="img-caption">
-            Real-Space Spin Chern Number
-            <span>Physical Review Letters 2024</span>
-          </div>
+        <div class="img-tile" style="height:158px">
+          <img src="spinchernnumber_orig.png" alt="Spin Chern number">
+          <div class="img-cap">Real-Space Spin Chern Number<span>Physical Review Letters 2024</span></div>
         </div>
-        <!-- Bottom right: Transverse SOI -->
-        <div class="img-tile" style="height:165px">
-          <img src="TOC.png" alt="Transverse spin-orbit interaction" style="object-position:left center">
-          <div class="img-caption">
-            Transverse Spin-Orbit Interaction
-            <span>Nano Letters 2024</span>
-          </div>
+        <div class="img-tile" style="height:158px">
+          <img src="TOC.png" alt="Transverse spin-orbit" style="object-position:left center">
+          <div class="img-cap">Transverse Spin-Orbit Interaction<span>Nano Letters 2024</span></div>
         </div>
       </div>
-      <div class="research-motto">
-        Bridging <strong>topology</strong>, <strong>spin</strong> &amp; <strong>nanophotonics</strong> —<br>where geometry encodes light's deepest properties
-      </div>
+      <div class="hero-motto">Bridging <strong>topology</strong>, <strong>spin</strong> &amp; <strong>nanophotonics</strong> &mdash; where geometry encodes light&rsquo;s deepest properties</div>
     </div>
-
-  </div>
-  <div class="scroll-h">
-    <div class="scroll-ln"></div>
-    <span>Scroll</span>
   </div>
 </section>
 
 <hr class="div">
 
-<!-- ABOUT -->
 <div id="about" class="sw">
-  <div class="sl rv">01 — About</div>
-  <h2 class="rv">Who I Am &amp;<br><span>What I Study</span></h2>
+  <div class="sl rv">01 &mdash; About</div>
+  <h2 class="rv">Biography &amp;<br><span>CV</span></h2>
   <div class="ag">
     <div class="at rv">
-      <p>I am a Ph.D. researcher in the <strong>Photonics Group</strong> at the Department of Physics, City University of Hong Kong, supervised by <strong>Prof. Shubo Wang</strong>. My work focuses on the topological and geometric properties of optical near fields.</p>
-      <p>My research centers on <strong>real-space topological photonics</strong> — extending invariants such as the Chern number and Euler characteristic from momentum-space band theory into the electromagnetic near fields of finite nanostructures. A key result is that the real-space spin Chern number is intrinsically quantized and equals the structure's Euler characteristic, independent of material or excitation.</p>
-      <p>Beyond topology, I study <strong>polarization singularities, spin-orbit interactions, and optical dark spots</strong> in near-field environments — phenomena that connect the geometry of light to chiral sensing, optical forces, and nanoscale information encoding.</p>
-      <div class="stats">
-        <div class="sb"><span class="sn">12</span><span class="sk">Publications</span></div>
-        <div class="sb"><span class="sn">PRL</span><span class="sk">Top Venue</span></div>
-        <div class="sb"><span class="sn">CityU</span><span class="sk">Hong Kong</span></div>
-        <div class="sb"><span class="sn">2017–</span><span class="sk">Research Since</span></div>
+      <p>I am a <strong>Postdoctoral Researcher</strong> at the Department of Physics, City University of Hong Kong. My research focuses on the topological and geometric properties of optical near fields &mdash; extending invariants such as the Chern number and Euler characteristic from momentum-space band theory into the real-space electromagnetic fields of finite nanostructures.</p>
+      <p>My recent work demonstrated that the <strong>real-space spin Chern number</strong> of optical near fields is intrinsically quantized and equals a structure&rsquo;s Euler characteristic, independent of material composition or external excitation. I also study polarization singularities, spin-orbit interactions of light, and chiral light-matter interactions in plasmonic and photonic systems.</p>
+      <div class="cv-section">
+        <div class="cv-title">Academic Position</div>
+        <div class="cv-item">
+          <div class="cv-year">2022&ndash;2026</div>
+          <div><div class="cv-role">Postdoctoral Scholar</div><div class="cv-where">City University of Hong Kong, Hong Kong, China</div></div>
+        </div>
+      </div>
+      <div class="cv-section">
+        <div class="cv-title">Education</div>
+        <div class="cv-item">
+          <div class="cv-year">2017&ndash;2021</div>
+          <div><div class="cv-role">Ph.D. in Optics</div><div class="cv-where">Wuhan University, Wuhan, China</div><div class="cv-thesis">Thesis: Transverse spin angular momentum, electromagnetic duality, and optical helicity in nano-waveguides</div></div>
+        </div>
+        <div class="cv-item">
+          <div class="cv-year">2014&ndash;2017</div>
+          <div><div class="cv-role">M.S. in Optics</div><div class="cv-where">Shaanxi Normal University, Xi&rsquo;an, China</div></div>
+        </div>
+        <div class="cv-item">
+          <div class="cv-year">2010&ndash;2014</div>
+          <div><div class="cv-role">B.S. in Physics</div><div class="cv-where">Southwest University, Chongqing, China</div></div>
+        </div>
       </div>
     </div>
     <div class="rv d2">
-      <div class="ac">
-        <div class="pp">[ Photo ]</div>
+      <div class="about-card">
+        <div class="pp"><img src="photon.jpg" alt="Tong Fu"></div>
         <div class="pi">
-          <h3>Tong Fu &nbsp;傅彤</h3>
-          <p>Ph.D. Researcher</p>
-          <p class="dp">Dept. of Physics · CityU Hong Kong</p>
-          <p class="dp" style="margin-top:.25rem">Photonics Group · Shubo Wang Lab</p>
+          <h3>Tong Fu &nbsp;&#x5085;&#x5F64;</h3>
+          <p>Postdoctoral Researcher</p>
+          <p class="dp">Dept. of Physics &middot; CityU Hong Kong</p>
+          <div class="pi-stat">
+            <div class="ps"><span class="ps-n">14</span><span class="ps-k">h-index</span></div>
+            <div class="ps"><span class="ps-n">20</span><span class="ps-k">i10-index</span></div>
+          </div>
         </div>
         <div class="pls">
           <a href="https://scholar.google.com/citations?user=cmI1r9sAAAAJ" target="_blank" class="pl">Scholar</a>
-          <a href="https://shubowang.weebly.com" target="_blank" class="pl">Group</a>
-          <a href="mailto:tongfu@cityu.edu.hk" class="pl">Email</a>
-          <a href="#" class="pl">CV</a>
+          <a href="https://orcid.org/0000-0001-7669-6903" target="_blank" class="pl">ORCID</a>
+          <a href="mailto:tongfu.physics@gmail.com" class="pl">Gmail</a>
+          <a href="#" class="pl">CV PDF</a>
         </div>
       </div>
     </div>
@@ -286,197 +245,141 @@ footer{padding:1.8rem 3rem;border-top:1px solid var(--border);display:flex;justi
 
 <hr class="div">
 
-<!-- RESEARCH -->
 <div id="research" class="sw">
-  <div class="sl rv">02 — Research</div>
+  <div class="sl rv">02 &mdash; Research</div>
   <h2 class="rv">Areas of<br><span>Investigation</span></h2>
   <div class="ig rv">
-    <div class="ic">
-      <div class="in">01</div>
-      <h3>Topological Photonics</h3>
-      <p>Extending topological invariants — spin Chern numbers, Euler characteristics, C-lines — from momentum-space band theory into the real-space near fields of finite nanostructures. The shape of a structure topologically constrains its electromagnetic near field.</p>
-      <div class="ii"><img src="spinchernnumber_orig.png" alt="Spin Chern number torus"></div>
-      <div class="tags"><span class="tg">Chern Number</span><span class="tg">C-Lines</span><span class="tg">Euler Characteristic</span></div>
-    </div>
-    <div class="ic">
-      <div class="in">02</div>
-      <h3>Spin Photonics</h3>
-      <p>Transverse spin-orbit interactions of light in nanoscale environments: how photon spin couples to orbital angular momentum in evanescent fields, curved waveguides, and resonant structures. Analogous to the Dresselhaus effect in solids.</p>
-      <div class="ii"><img src="TOC.png" alt="Transverse spin-orbit interaction"></div>
-      <div class="tags"><span class="tg">Transverse Spin</span><span class="tg">Spin-Orbit</span><span class="tg">Evanescent Waves</span></div>
-    </div>
-    <div class="ic">
-      <div class="in">03</div>
-      <h3>Nanophotonics</h3>
-      <p>Polarization singularities and topological dark spots in the near fields of metallic nanostructures, chiral near-field enhancement for biosensing, spin-momentum locking in plasmonic waveguides, and optical forces on chiral particles.</p>
-      <div class="ii"><img src="TOC01.png" alt="Electric C lines near metal sphere"></div>
-      <div class="tags"><span class="tg">Dark Spots</span><span class="tg">Chiral Near Fields</span><span class="tg">Plasmonics</span></div>
-    </div>
+    <div class="ic"><div class="in">01</div><h3>Topological Photonics</h3><p>Extending topological invariants &mdash; spin Chern numbers, Euler characteristics, and polarization singularities &mdash; from momentum-space band theory into the real-space near fields of finite nanostructures.</p><div class="ii"><img src="spinchernnumber_orig.png" alt="Spin Chern number torus"></div><div class="tags"><span class="tg">Chern Number</span><span class="tg">C-Lines</span><span class="tg">Euler Characteristic</span></div></div>
+    <div class="ic"><div class="in">02</div><h3>Spin Photonics</h3><p>Transverse spin-orbit interactions of light in nanoscale environments: how photon spin couples to orbital angular momentum in evanescent fields, curved waveguides, and resonant structures, analogous to the Dresselhaus effect in solids.</p><div class="ii"><img src="TOC.png" alt="Transverse spin-orbit"></div><div class="tags"><span class="tg">Transverse Spin</span><span class="tg">Spin-Orbit</span><span class="tg">Evanescent Waves</span></div></div>
+    <div class="ic"><div class="in">03</div><h3>Nanophotonics</h3><p>Polarization singularities and topological dark spots in metallic nanostructures, chiral near-field enhancement for biosensing, and directional emission via spin-momentum locking in plasmonic waveguides.</p><div class="ii"><img src="TOC01.png" alt="Electric C lines metal sphere"></div><div class="tags"><span class="tg">Dark Spots</span><span class="tg">Chiral Near Fields</span><span class="tg">Plasmonics</span></div></div>
   </div>
 </div>
 
 <hr class="div">
 
-<!-- PUBLICATIONS -->
 <div id="publications" class="sw">
-  <div class="sl rv">03 — Publications</div>
-  <h2 class="rv">Selected<br><span>Works</span></h2>
+  <div class="sl rv">03 &mdash; Publications</div>
+  <h2 class="rv">Publication<br><span>List</span></h2>
   <div class="pf rv">
-    <button class="fb on" data-f="all">All (12)</button>
-    <button class="fb" data-f="first">First Author</button>
+    <button class="fb on" data-f="all">All</button>
+    <button class="fb" data-f="first">First / Corr.</button>
     <button class="fb" data-f="prl">PRL / NL / ACS</button>
-    <button class="fb" data-f="2024">2024+</button>
+    <button class="fb" data-f="recent">2022+</button>
   </div>
   <div class="pub-list rv">
 
-    <!-- 2026 -->
-    <div class="pi-item" data-t="2024 journal">
+    <div class="pi-item" data-t="all first recent">
+      <div class="py">2026<br>Preprint</div>
+      <div><div class="pt">Real-Space Topological Singularities in Structured Flexural Waves</div><div class="pa"><strong>T. Fu</strong>&dagger;, P. Zhao&dagger;, L. Luo, Z. Zhou, D. Liu, J. Li*, S. Wang* &nbsp;<em>(&dagger;equal contribution)</em></div><div class="pv">arXiv:2603.21883 &mdash; In Revision</div><div class="pb-wrap"><span class="pb b-arxiv">arXiv</span><span class="pb b-hi">In Revision</span></div></div>
+      <div class="lks"><a href="https://arxiv.org/abs/2603.21883" target="_blank" class="lk">arXiv</a></div>
+    </div>
+
+    <div class="pi-item" data-t="all first prl recent">
       <div class="py">2026</div>
-      <div>
-        <div class="pt">Water-Wave Pancharatnam–Berry Phase Induced by 4D Spin-Orbit State Evolution</div>
-        <div class="pa">W. Xiao, S. Jia, <strong>T. Fu</strong>, and S. Wang*</div>
-        <div class="pv">Advanced Science 13, e15337 (2026)</div>
-        <div class="pb-wrap"><span class="pb b-adv">Advanced Science</span></div>
-      </div>
+      <div><div class="pt">Fu et al. Reply</div><div class="pa"><strong>T. Fu</strong>, R.-Y. Zhang, S. Jia, C. T. Chan, and S. Wang*</div><div class="pv">Physical Review Letters 136, 149302 (2026)</div><div class="pb-wrap"><span class="pb b-prl">Phys. Rev. Lett.</span></div></div>
       <div class="lks"><a href="#" class="lk">DOI</a></div>
     </div>
 
-    <!-- 2025 OE -->
-    <div class="pi-item" data-t="2024 first journal">
+    <div class="pi-item" data-t="all recent">
+      <div class="py">2026</div>
+      <div><div class="pt">Water-Wave Pancharatnam&ndash;Berry Phase Induced by 4D Spin-Orbit State Evolution</div><div class="pa">W. Xiao, S. Jia, T. Fu, and S. Wang*</div><div class="pv">Advanced Science 13, e15337 (2026)</div><div class="pb-wrap"><span class="pb b-adv">Advanced Science</span></div></div>
+      <div class="lks"><a href="#" class="lk">DOI</a></div>
+    </div>
+
+    <div class="pi-item" data-t="all recent">
       <div class="py">2025</div>
-      <div>
-        <div class="pt">Optical Polarization Singularities in Metallic Cavities Excited by Electric Dipole Sources</div>
-        <div class="pa">S. Jia, <strong>T. Fu</strong>, and S. Wang*</div>
-        <div class="pv">Optics Express 33, 11350 (2025)</div>
-        <div class="pb-wrap"><span class="pb b-oe">Optics Express</span><span class="pb b-hi">Editors' Pick</span></div>
-      </div>
+      <div><div class="pt">Optical Polarization Singularities in Metallic Cavities Excited by Electric Dipole Sources</div><div class="pa">S. Jia, T. Fu, and S. Wang*</div><div class="pv">Optics Express 33, 11350 (2025)</div><div class="pb-wrap"><span class="pb b-oe">Optics Express</span><span class="pb b-hi">Editors&rsquo; Pick</span></div></div>
       <div class="lks"><a href="#" class="lk">DOI</a></div>
     </div>
 
-    <!-- 2025 PRA -->
-    <div class="pi-item" data-t="2024 journal">
+    <div class="pi-item" data-t="all recent">
       <div class="py">2025</div>
-      <div>
-        <div class="pt">Optical Force and Torque on a Spinning Dielectric Sphere</div>
-        <div class="pa">H. Li, W. Xiao, <strong>T. Fu</strong>, Z. Yang, and S. Wang*</div>
-        <div class="pv">Physical Review A 111, 063512 (2025)</div>
-        <div class="pb-wrap"><span class="pb b-pra">Phys. Rev. A</span></div>
-      </div>
+      <div><div class="pt">Optical Force and Torque on a Spinning Dielectric Sphere</div><div class="pa">H. Li, W. Xiao, T. Fu, Z. Yang, and S. Wang*</div><div class="pv">Physical Review A 111, 063512 (2025)</div><div class="pb-wrap"><span class="pb b-pra">Phys. Rev. A</span></div></div>
       <div class="lks"><a href="#" class="lk">DOI</a></div>
     </div>
 
-    <!-- 2024 Nano Letters -->
-    <div class="pi-item" data-t="2024 first prl journal">
+    <div class="pi-item" data-t="all first prl recent">
       <div class="py">2024</div>
-      <div>
-        <div class="pt">Transverse Spin–Orbit Interaction of Light</div>
-        <div class="pa"><strong>T. Fu</strong>, J. Lin, Y. Xu, J. Jia, Y. Wang, S. Zhang*, and H. Xu*</div>
-        <div class="pv">Nano Letters 24, 10783–10789 (2024)</div>
-        <div class="pb-wrap"><span class="pb b-nl">Nano Letters</span></div>
-      </div>
+      <div><div class="pt">Near-Field Spin Chern Number Quantized by Real-Space Topology of Optical Structures</div><div class="pa"><strong>T. Fu</strong>, R.-Y. Zhang, S. Jia, C. T. Chan, and S. Wang*</div><div class="pv">Physical Review Letters 132, 233801 (2024)</div><div class="pb-wrap"><span class="pb b-prl">Phys. Rev. Lett.</span></div></div>
+      <div class="lks"><a href="https://arxiv.org/abs/2312.11771" target="_blank" class="lk">arXiv</a><a href="https://doi.org/10.1103/PhysRevLett.132.233801" target="_blank" class="lk">DOI</a></div>
+    </div>
+
+    <div class="pi-item" data-t="all first prl recent">
+      <div class="py">2024</div>
+      <div><div class="pt">Transverse Spin&ndash;Orbit Interaction of Light</div><div class="pa"><strong>T. Fu</strong>, J. Lin, Y. Xu, J. Jia, Y. Wang, S. Zhang*, and H. Xu*</div><div class="pv">Nano Letters 24, 10783&ndash;10789 (2024)</div><div class="pb-wrap"><span class="pb b-nl">Nano Letters</span></div></div>
       <div class="lks"><a href="https://doi.org/10.1021/acs.nanolett.4c01931" target="_blank" class="lk">DOI</a></div>
     </div>
 
-    <!-- 2024 OE chiral sensing -->
-    <div class="pi-item" data-t="2024 first journal">
+    <div class="pi-item" data-t="all first prl recent">
       <div class="py">2024</div>
-      <div>
-        <div class="pt">Enhanced Chiral Sensing by Optical Whispering Gallery Mode Microresonator</div>
-        <div class="pa">X. Tian, Y. Bai, <strong>T. Fu</strong>*, and Z. Zhang</div>
-        <div class="pv">Optics Express 32(18), 31034 (2024)</div>
-        <div class="pb-wrap"><span class="pb b-oe">Optics Express</span></div>
-      </div>
+      <div><div class="pt">Topological Dark Spots of the Electric Near Field in Metal Structures</div><div class="pa"><strong>T. Fu</strong>, Q. Tong, S. Jia, and S. Wang*</div><div class="pv">ACS Photonics 11, 4342&ndash;4348 (2024) &middot; Rising Stars in Photonics</div><div class="pb-wrap"><span class="pb b-acs">ACS Photonics</span><span class="pb b-hi">Rising Stars</span></div></div>
+      <div class="lks"><a href="https://arxiv.org/abs/2407.16213" target="_blank" class="lk">arXiv</a><a href="https://doi.org/10.1021/acsphotonics.4c01277" target="_blank" class="lk">DOI</a></div>
+    </div>
+
+    <div class="pi-item" data-t="all first recent">
+      <div class="py">2024</div>
+      <div><div class="pt">Enhanced Chiral Sensing by Optical Whispering Gallery Mode Microresonator</div><div class="pa">X. Tian, Y. Bai, <strong>T. Fu</strong>*, Z. Zhang &nbsp;<em>(* corresponding)</em></div><div class="pv">Optics Express 32(18), 31034&ndash;31042 (2024)</div><div class="pb-wrap"><span class="pb b-oe">Optics Express</span><span class="pb b-co">Corresponding</span></div></div>
       <div class="lks"><a href="https://doi.org/10.1364/OE.532514" target="_blank" class="lk">DOI</a></div>
     </div>
 
-    <!-- 2024 ACS Photonics -->
-    <div class="pi-item" data-t="2024 first prl journal">
-      <div class="py">2024</div>
-      <div>
-        <div class="pt">Topological Dark Spots of the Electric Near Field in Metal Structures</div>
-        <div class="pa"><strong>T. Fu</strong>, Q. Tong, S. Jia, and S. Wang*</div>
-        <div class="pv">ACS Photonics 11, 4342 (2024) · Special Issue: Rising Stars in Photonics</div>
-        <div class="pb-wrap"><span class="pb b-acs">ACS Photonics</span><span class="pb b-hi">Rising Stars</span></div>
-      </div>
-      <div class="lks">
-        <a href="https://arxiv.org/abs/2407.16213" target="_blank" class="lk">arXiv</a>
-        <a href="https://doi.org/10.1021/acsphotonics.4c01277" target="_blank" class="lk">DOI</a>
-      </div>
+    <div class="pi-item" data-t="all recent">
+      <div class="py">2023</div>
+      <div><div class="pt">Broadband and Large-Area Optical Chirality Generated by an Achiral Metasurface under Achiral Excitation</div><div class="pa">S. Jia, T. Fu, J. Peng, and S. Wang*</div><div class="pv">Physical Review A 108, 053504 (2023)</div><div class="pb-wrap"><span class="pb b-pra">Phys. Rev. A</span></div></div>
+      <div class="lks"><a href="#" class="lk">DOI</a></div>
     </div>
 
-    <!-- 2024 PRL -->
-    <div class="pi-item" data-t="2024 first prl journal">
-      <div class="py">2024</div>
-      <div>
-        <div class="pt">Near-Field Spin Chern Number Quantized by Real-Space Topology of Optical Structures</div>
-        <div class="pa"><strong>T. Fu</strong>, R.-Y. Zhang, S. Jia, C. T. Chan, and S. Wang*</div>
-        <div class="pv">Physical Review Letters 132, 233801 (2024)</div>
-        <div class="pb-wrap"><span class="pb b-prl">Phys. Rev. Lett.</span></div>
-      </div>
-      <div class="lks">
-        <a href="https://arxiv.org/abs/2312.11771" target="_blank" class="lk">arXiv</a>
-        <a href="https://doi.org/10.1103/PhysRevLett.132.233801" target="_blank" class="lk">DOI</a>
-      </div>
-    </div>
-
-    <!-- 2021 Opt Comm -->
-    <div class="pi-item" data-t="first journal">
+    <div class="pi-item" data-t="all first">
       <div class="py">2021</div>
-      <div>
-        <div class="pt">Nanocavity Mediated Directional Coupler in Plasmonics Waveguides</div>
-        <div class="pa"><strong>T. Fu</strong>, Q. Guo, Z. Shi, S. Zhang*, and H. Xu*</div>
-        <div class="pv">Optics Communications 497, 127160 (2021)</div>
-        <div class="pb-wrap"><span class="pb b-oc">Opt. Commun.</span></div>
-      </div>
+      <div><div class="pt">Nanocavity Mediated Directional Coupler in Plasmonics Waveguides</div><div class="pa"><strong>T. Fu</strong>, Q. Guo, Z. Shi, S. Zhang*, and H. Xu*</div><div class="pv">Optics Communications 497, 127160 (2021)</div><div class="pb-wrap"><span class="pb b-oc">Opt. Commun.</span></div></div>
       <div class="lks"><a href="https://doi.org/10.1016/j.optcom.2021.127160" target="_blank" class="lk">DOI</a></div>
     </div>
 
-    <!-- 2019 PRL -->
-    <div class="pi-item" data-t="prl journal">
+    <div class="pi-item" data-t="all">
+      <div class="py">2021</div>
+      <div><div class="pt">Superradiative Plasmonic Nanoantenna Biosensors Enable Sensitive Immunoassay Using Naked Eyes</div><div class="pa">Y. Xiong, T. Fu, D. Zhang, S. Zhang*, and H. Xu*</div><div class="pv">Nanoscale 13(4), 2429&ndash;2435 (2021)</div><div class="pb-wrap"><span class="pb b-nano">Nanoscale</span></div></div>
+      <div class="lks"><a href="#" class="lk">DOI</a></div>
+    </div>
+
+    <div class="pi-item" data-t="all">
+      <div class="py">2020</div>
+      <div><div class="pt">Reduced Loss of Plasmon Propagation in a Ag Nanowire on Si Substrate</div><div class="pa">N. Zhang, T. Fu, H. Xu, and W. Wang*</div><div class="pv">Nano Energy 68, 104322 (2020)</div><div class="pb-wrap"><span class="pb b-ne">Nano Energy</span></div></div>
+      <div class="lks"><a href="#" class="lk">DOI</a></div>
+    </div>
+
+    <div class="pi-item" data-t="all prl">
       <div class="py">2019</div>
-      <div>
-        <div class="pt">Routing a Chiral Raman Signal Based on Spin-Orbit Interaction of Light</div>
-        <div class="pa">Q. Guo, <strong>T. Fu</strong>, J. Tang, D. Pan, S. Zhang*, and H. Xu*</div>
-        <div class="pv">Physical Review Letters 123, 183903 (2019)</div>
-        <div class="pb-wrap"><span class="pb b-prl">Phys. Rev. Lett.</span></div>
-      </div>
+      <div><div class="pt">Routing a Chiral Raman Signal Based on Spin-Orbit Interaction of Light</div><div class="pa">Q. Guo, T. Fu, J. Tang, D. Pan, S. Zhang*, and H. Xu*</div><div class="pv">Physical Review Letters 123, 183903 (2019)</div><div class="pb-wrap"><span class="pb b-prl">Phys. Rev. Lett.</span></div></div>
       <div class="lks"><a href="https://doi.org/10.1103/PhysRevLett.123.183903" target="_blank" class="lk">DOI</a></div>
     </div>
 
-    <!-- 2017 J Phys D -->
-    <div class="pi-item" data-t="first journal">
+    <div class="pi-item" data-t="all first">
       <div class="py">2017</div>
-      <div>
-        <div class="pt">Chiral Near-Fields Around Chiral Dolmen Nanostructure</div>
-        <div class="pa"><strong>T. Fu</strong>, T. Wang, Y. Chen, Y. Wang, Y. Qu, and Z. Zhang*</div>
-        <div class="pv">Journal of Physics D: Applied Physics 50, 474004 (2017)</div>
-        <div class="pb-wrap"><span class="pb b-jpd">J. Phys. D</span></div>
-      </div>
+      <div><div class="pt">Chiral Near-Fields Around Chiral Dolmen Nanostructure</div><div class="pa"><strong>T. Fu</strong>, T. Wang, Y. Chen, Y. Wang, Y. Qu, and Z. Zhang*</div><div class="pv">Journal of Physics D: Applied Physics 50, 474004 (2017)</div><div class="pb-wrap"><span class="pb b-jpd">J. Phys. D</span></div></div>
       <div class="lks"><a href="https://doi.org/10.1088/1361-6463/aa8f81" target="_blank" class="lk">DOI</a></div>
     </div>
 
-    <!-- 2017 OE graphene -->
-    <div class="pi-item" data-t="first journal">
+    <div class="pi-item" data-t="all first">
       <div class="py">2017</div>
-      <div>
-        <div class="pt">Active Control of Optical Chirality with Graphene-Based Achiral Nanorings</div>
-        <div class="pa"><strong>T. Fu</strong>, Y. Chen, T. Wang, H. Li, Z. Zhang, and L. Wang*</div>
-        <div class="pv">Optics Express 25(20), 24623–24629 (2017)</div>
-        <div class="pb-wrap"><span class="pb b-oe">Optics Express</span></div>
-      </div>
+      <div><div class="pt">Active Control of Optical Chirality with Graphene-Based Achiral Nanorings</div><div class="pa"><strong>T. Fu</strong>, Y. Chen, T. Wang, H. Li, Z. Zhang, and L. Wang*</div><div class="pv">Optics Express 25(20), 24623&ndash;24629 (2017)</div><div class="pb-wrap"><span class="pb b-oe">Optics Express</span></div></div>
       <div class="lks"><a href="https://doi.org/10.1364/OE.25.024623" target="_blank" class="lk">DOI</a></div>
     </div>
 
-    <!-- 2017 JPC C -->
-    <div class="pi-item" data-t="first journal">
+    <div class="pi-item" data-t="all first">
       <div class="py">2017</div>
-      <div>
-        <div class="pt">Tunable Chiroptical Response of Chiral Plasmonic Nanostructures Fabricated with Chiral Templates through Oblique Angle Deposition</div>
-        <div class="pa"><strong>T. Fu</strong>, Y. Qu, T. Wang, G. Wang, Y. Wang, H. Li, J. Li, L. Wang, and Z. Zhang*</div>
-        <div class="pv">Journal of Physical Chemistry C 121, 1299–1304 (2017)</div>
-        <div class="pb-wrap"><span class="pb b-jpc">J. Phys. Chem. C</span></div>
-      </div>
+      <div><div class="pt">Tunable Chiroptical Response of Chiral Plasmonic Nanostructures Fabricated with Chiral Templates through Oblique Angle Deposition</div><div class="pa"><strong>T. Fu</strong>, Y. Qu, T. Wang, G. Wang, Y. Wang, H. Li, J. Li, L. Wang, and Z. Zhang*</div><div class="pv">Journal of Physical Chemistry C 121(2), 1299&ndash;1304 (2017)</div><div class="pb-wrap"><span class="pb b-jpc">J. Phys. Chem. C</span></div></div>
       <div class="lks"><a href="https://doi.org/10.1021/acs.jpcc.6b10833" target="_blank" class="lk">DOI</a></div>
+    </div>
+
+    <div class="pi-item" data-t="all">
+      <div class="py">2017</div>
+      <div><div class="pt">Induced Chirality in Micron Wave through Electromagnetic Coupling between Chiral Molecules and Graphene Nanostructures</div><div class="pa">Y. Wang, T. Fu, T. Wang, Y. Li, and Z. Zhang*</div><div class="pv">Carbon 120, 203&ndash;208 (2017)</div><div class="pb-wrap"><span class="pb b-carbon">Carbon</span></div></div>
+      <div class="lks"><a href="#" class="lk">DOI</a></div>
+    </div>
+
+    <div class="pi-item" data-t="all">
+      <div class="py">2017</div>
+      <div><div class="pt">Circular Dichroism of a Tilted U-Shaped Nanostructure</div><div class="pa">T. Wang, T. Fu, Y. Chen, and Z. Zhang</div><div class="pv">Optics Letters 42(14), 2842&ndash;2845 (2017)</div><div class="pb-wrap"><span class="pb b-ol">Opt. Lett.</span></div></div>
+      <div class="lks"><a href="#" class="lk">DOI</a></div>
     </div>
 
   </div>
@@ -484,49 +387,36 @@ footer{padding:1.8rem 3rem;border-top:1px solid var(--border);display:flex;justi
 
 <hr class="div">
 
-<!-- CONTACT -->
 <div id="contact" class="sw cc">
-  <div class="sl rv">04 — Contact</div>
+  <div class="sl rv">04 &mdash; Contact</div>
   <h2 class="rv">Get in<br><span>Touch</span></h2>
-  <p class="cs rv">Open to discussions on nanophotonics, topological light, and spin-orbit interactions. Feel free to reach out regarding collaborations, research questions, or speaking invitations.</p>
-  <a href="mailto:tongfu@cityu.edu.hk" class="ce rv">tongfu@cityu.edu.hk</a>
+  <p class="cs rv">Open to discussions on nanophotonics, topological photonics, and spin-orbit interactions of light. Welcome collaborations, research questions, or talk invitations.</p>
+  <a href="mailto:tongfu.physics@gmail.com" class="ce rv">tongfu.physics@gmail.com</a>
   <div class="soc rv">
-    <a href="https://scholar.google.com/citations?user=cmI1r9sAAAAJ" target="_blank" class="sc">
-      <svg viewBox="0 0 24 24"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.978 0-5.548 1.749-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14zm0 2a5 5 0 1 1 0 10A5 5 0 0 1 12 12zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
-      Google Scholar
-    </a>
-    <a href="https://shubowang.weebly.com/members.html" target="_blank" class="sc">
-      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-      Research Group
-    </a>
-    <a href="https://arxiv.org/search/?searchtype=author&query=Tong+Fu" target="_blank" class="sc">
-      <svg viewBox="0 0 24 24"><path d="M21 5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5zm-2 14H5V5h14v14zM7 10h2v7H7zm4-3h2v10h-2zm4 6h2v4h-2z"/></svg>
-      arXiv
-    </a>
-    <a href="mailto:tongfu@cityu.edu.hk" class="sc">
-      <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
-      Email
-    </a>
+    <a href="https://scholar.google.com/citations?user=cmI1r9sAAAAJ" target="_blank" class="sc"><svg viewBox="0 0 24 24"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.978 0-5.548 1.749-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14zm0 2a5 5 0 1 1 0 10A5 5 0 0 1 12 12zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>Google Scholar</a>
+    <a href="https://orcid.org/0000-0001-7669-6903" target="_blank" class="sc"><svg viewBox="0 0 24 24"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.016-5.325 5.016h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 3.872-2.484 3.872-3.722 0-2.016-1.284-3.722-3.828-3.722h-2.341z"/></svg>ORCID</a>
+    <a href="https://arxiv.org/search/?searchtype=author&query=Tong+Fu" target="_blank" class="sc"><svg viewBox="0 0 24 24"><path d="M21 5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5zm-2 14H5V5h14v14zM7 10h2v7H7zm4-3h2v10h-2zm4 6h2v4h-2z"/></svg>arXiv</a>
+    <a href="mailto:tongfu.physics@gmail.com" class="sc"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>Gmail</a>
+    <a href="mailto:tongfu@cityu.edu.hk" class="sc"><svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>CityU Email</a>
   </div>
 </div>
 
 <footer>
-  <span class="fl">© 2025 Tong Fu &nbsp;傅彤</span>
-  <span class="fr">City University of Hong Kong · <span>Photonics Group</span></span>
+  <span class="fl">&copy; 2025 Tong Fu &nbsp;&#x5085;&#x5F64; &middot; City University of Hong Kong</span>
+  <span class="fr">ORCID: <span>0000-0001-7669-6903</span></span>
 </footer>
 
 <script>
-/* Canvas */
 (function(){
   const c=document.getElementById('canvas'),x=c.getContext('2d');
   let W,H,ps=[];
-  const N=90,D=125,S=.2;
+  const N=75,D=115,S=.17;
   function resize(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight;}
   class P{
     constructor(){this.init(true)}
-    init(s){this.x=Math.random()*W;this.y=s?Math.random()*H:Math.random()*H;this.vx=(Math.random()-.5)*S;this.vy=(Math.random()-.5)*S;this.r=Math.random()*1.1+.35;this.a=Math.random()*.6+.25;}
+    init(s){this.x=Math.random()*W;this.y=s?Math.random()*H:Math.random()*H;this.vx=(Math.random()-.5)*S;this.vy=(Math.random()-.5)*S;this.r=Math.random()*.85+.28;this.a=Math.random()*.28+.08;}
     tick(){this.x+=this.vx;this.y+=this.vy;if(this.x<-8)this.x=W+8;if(this.x>W+8)this.x=-8;if(this.y<-8)this.y=H+8;if(this.y>H+8)this.y=-8;}
-    draw(){x.beginPath();x.arc(this.x,this.y,this.r,0,Math.PI*2);x.fillStyle=`rgba(0,200,255,${this.a})`;x.fill();}
+    draw(){x.beginPath();x.arc(this.x,this.y,this.r,0,Math.PI*2);x.fillStyle='rgba(0,80,180,'+this.a+')';x.fill();}
   }
   function frame(){
     x.clearRect(0,0,W,H);
@@ -534,7 +424,7 @@ footer{padding:1.8rem 3rem;border-top:1px solid var(--border);display:flex;justi
       ps[i].tick();ps[i].draw();
       for(let j=i+1;j<ps.length;j++){
         const dx=ps[i].x-ps[j].x,dy=ps[i].y-ps[j].y,d=Math.sqrt(dx*dx+dy*dy);
-        if(d<D){x.beginPath();x.moveTo(ps[i].x,ps[i].y);x.lineTo(ps[j].x,ps[j].y);x.strokeStyle=`rgba(0,200,255,${(1-d/D)*.25})`;x.lineWidth=.5;x.stroke();}
+        if(d<D){x.beginPath();x.moveTo(ps[i].x,ps[i].y);x.lineTo(ps[j].x,ps[j].y);x.strokeStyle='rgba(0,80,180,'+(1-d/D)*.1+')';x.lineWidth=.5;x.stroke();}
       }
     }
     requestAnimationFrame(frame);
@@ -542,34 +432,24 @@ footer{padding:1.8rem 3rem;border-top:1px solid var(--border);display:flex;justi
   window.addEventListener('resize',resize);
   resize();ps=Array.from({length:N},()=>new P());frame();
 })();
-
-/* Scroll reveal */
 (function(){
-  const els=document.querySelectorAll('.rv');
   const obs=new IntersectionObserver(e=>{e.forEach(v=>{if(v.isIntersecting){v.target.classList.add('vis');obs.unobserve(v.target);}});},{threshold:.08});
-  els.forEach(el=>obs.observe(el));
+  document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
 })();
-
-/* Filter */
 document.querySelectorAll('.fb').forEach(btn=>{
   btn.addEventListener('click',function(){
     document.querySelectorAll('.fb').forEach(b=>b.classList.remove('on'));
     this.classList.add('on');
     const f=this.dataset.f;
-    document.querySelectorAll('.pi-item').forEach(p=>{
-      p.style.display=(f==='all'||p.dataset.t.includes(f))?'grid':'none';
-    });
+    document.querySelectorAll('.pi-item').forEach(p=>{p.style.display=(f==='all'||p.dataset.t.includes(f))?'grid':'none';});
   });
 });
-
-/* Nav highlight */
 (function(){
-  const ids=['about','research','publications','contact'];
-  const lmap={};
-  ids.forEach(id=>{lmap[id]=document.querySelector(`.nav-links a[href="#${id}"]`);});
+  const ids=['about','research','publications','contact'],lmap={};
+  ids.forEach(id=>{lmap[id]=document.querySelector('.nav-links a[href="#'+id+'"]');});
   window.addEventListener('scroll',()=>{
     let cur='';
-    ids.forEach(id=>{const el=document.getElementById(id);if(el&&window.scrollY>=el.offsetTop-160)cur=id;});
+    ids.forEach(id=>{const el=document.getElementById(id);if(el&&window.scrollY>=el.offsetTop-140)cur=id;});
     Object.entries(lmap).forEach(([id,a])=>{if(a)a.classList.toggle('on',id===cur);});
   },{passive:true});
 })();
