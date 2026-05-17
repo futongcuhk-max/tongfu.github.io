@@ -39,45 +39,41 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.9rem 3rem;display:f
 .nav-links a{color:var(--text3);font-size:.74rem;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;transition:color .2s;font-family:'Space Mono',monospace;font-weight:400}
 .nav-links a:hover,.nav-links a.on{color:var(--blue)}
 
-/* HERO — full viewport, two columns */
-#hero{min-height:100vh;display:flex;align-items:center;background:var(--white);border-bottom:1.5px solid var(--border);position:relative;overflow:hidden}
-#canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.18;pointer-events:none}
-.hero-inner{position:relative;z-index:2;width:100%;max-width:1280px;margin:0 auto;padding:5.5rem 3rem 4rem;display:grid;grid-template-columns:420px 1fr;gap:3.5rem;align-items:start}
+/* HERO */
+#hero{background:var(--white);border-bottom:1.5px solid var(--border);position:relative;overflow:hidden}
+#canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.15;pointer-events:none}
+.hero-inner{position:relative;z-index:2;width:100%;max-width:1200px;margin:0 auto;padding:4.5rem 3rem 4rem}
 
-/* Hero left */
-.hero-name-block{margin-bottom:1.4rem}
-.hero-tag{font-family:'Space Mono',monospace;font-size:.68rem;color:var(--blue);letter-spacing:.2em;text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:.65rem;opacity:0;animation:fU .5s .2s forwards}
-.hero-tag::before{content:'';width:22px;height:1.5px;background:var(--blue)}
-h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,5.5vw,5rem);font-weight:300;line-height:1.0;color:var(--navy);margin-bottom:.5rem;opacity:0;animation:fU .6s .35s forwards}
-h1 em{font-style:italic;color:var(--blue)}
-.hero-cn{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:var(--text3);letter-spacing:.15em;margin-bottom:1.1rem;opacity:0;animation:fU .6s .45s forwards}
-.hero-title{font-size:.95rem;color:var(--text2);font-weight:400;margin-bottom:.3rem;opacity:0;animation:fU .6s .55s forwards}
-.hero-title strong{color:var(--text);font-weight:600}
-.hero-affil{font-family:'Space Mono',monospace;font-size:.68rem;color:var(--text3);letter-spacing:.07em;margin-bottom:.25rem;opacity:0;animation:fU .6s .6s forwards}
-.hero-affil span{color:var(--gold);font-weight:700}
-.hero-idx{font-family:'Space Mono',monospace;font-size:.66rem;color:var(--text3);margin-bottom:1.8rem;opacity:0;animation:fU .6s .65s forwards}
-.hero-btns{display:flex;gap:.75rem;flex-wrap:wrap;opacity:0;animation:fU .6s .75s forwards}
+/* Fu Group banner */
+.fg-banner{text-align:center;margin-bottom:3rem;padding-bottom:2.2rem;border-bottom:1.5px solid var(--border)}
+.fg-group{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,6vw,5rem);font-weight:300;color:var(--navy);letter-spacing:.04em;line-height:1;opacity:0;animation:fU .6s .2s forwards}
+.fg-group span{color:var(--blue);font-style:italic}
+.fg-sub{font-family:'Space Mono',monospace;font-size:.72rem;color:var(--text3);letter-spacing:.2em;text-transform:uppercase;margin-top:.8rem;opacity:0;animation:fU .6s .4s forwards}
+.fg-meta{font-family:'Space Mono',monospace;font-size:.67rem;color:var(--text3);margin-top:.4rem;opacity:0;animation:fU .6s .5s forwards}
+.fg-meta a{color:var(--blue);text-decoration:none}
+.fg-meta a:hover{text-decoration:underline}
+.fg-btns{display:flex;justify-content:center;gap:.75rem;flex-wrap:wrap;margin-top:1.2rem;opacity:0;animation:fU .6s .6s forwards}
+
 .btn{display:inline-flex;align-items:center;gap:.4rem;padding:.6rem 1.3rem;font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:all .2s;cursor:pointer;border:none}
 .bp{background:var(--blue);color:#fff;font-weight:700}.bp:hover{background:var(--blue2)}
 .bo{border:1.5px solid var(--border2);color:var(--text2);background:none}.bo:hover{border-color:var(--blue);color:var(--blue)}
 
-/* Hero right — research cards */
-.hero-research{opacity:0;animation:fI .8s .9s forwards}
-.hr-title{font-family:'Space Mono',monospace;font-size:.68rem;color:var(--text3);letter-spacing:.18em;text-transform:uppercase;margin-bottom:1.1rem;padding-bottom:.5rem;border-bottom:1.5px solid var(--border);display:flex;align-items:center;gap:.6rem}
-.hr-title::before{content:'';width:14px;height:1.5px;background:var(--blue)}
-.rc-grid{display:flex;flex-direction:column;gap:.85rem}
-.rc{background:var(--bg);border:1.5px solid var(--border);padding:1.2rem 1.35rem;position:relative;overflow:hidden;transition:border-color .25s,box-shadow .25s}
-.rc:hover{border-color:var(--blue);box-shadow:0 2px 12px rgba(26,86,219,.1)}
-.rc-top{display:flex;align-items:flex-start;gap:1rem}
-.rc-num{font-family:'Space Mono',monospace;font-size:.62rem;color:var(--blue);opacity:.5;min-width:1.5rem;padding-top:.18rem}
-.rc-body{flex:1;min-width:0}
-.rc h3{font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:600;color:var(--navy);margin-bottom:.3rem;line-height:1.3}
-.rc p{font-size:.84rem;color:var(--text2);line-height:1.7;margin-bottom:.6rem}
-.rc-links{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.3rem}
-.rc-link{font-family:'Space Mono',monospace;font-size:.6rem;color:var(--blue);text-decoration:none;border:1px solid rgba(26,86,219,.3);padding:.18rem .5rem;letter-spacing:.06em;transition:all .2s;background:rgba(26,86,219,.04)}
+/* Research cards — 3-column full width */
+.rc-header{font-family:'Space Mono',monospace;font-size:.68rem;color:var(--text3);letter-spacing:.18em;text-transform:uppercase;margin-bottom:1.4rem;display:flex;align-items:center;gap:.6rem;opacity:0;animation:fI .6s .7s forwards}
+.rc-header::before{content:'';width:14px;height:1.5px;background:var(--blue)}
+.rc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;opacity:0;animation:fI .7s .8s forwards}
+.rc{background:var(--white);border:1.5px solid var(--border);overflow:hidden;transition:border-color .25s,box-shadow .28s;display:flex;flex-direction:column}
+.rc:hover{border-color:var(--blue);box-shadow:0 4px 20px rgba(26,86,219,.1)}
+.rc-img{width:100%;overflow:hidden;background:var(--bg);flex-shrink:0}
+.rc-img img{width:100%;height:220px;object-fit:cover;object-position:center;display:block;transition:transform .4s ease}
+.rc:hover .rc-img img{transform:scale(1.03)}
+.rc-content{padding:1.3rem 1.4rem;flex:1;display:flex;flex-direction:column}
+.rc-num{font-family:'Space Mono',monospace;font-size:.6rem;color:var(--blue);opacity:.5;margin-bottom:.5rem;letter-spacing:.12em}
+.rc h3{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:var(--navy);margin-bottom:.55rem;line-height:1.3}
+.rc p{font-size:.84rem;color:var(--text2);line-height:1.72;margin-bottom:.8rem;flex:1}
+.rc-links{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:auto}
+.rc-link{font-family:'Space Mono',monospace;font-size:.59rem;color:var(--blue);text-decoration:none;border:1px solid rgba(26,86,219,.3);padding:.18rem .52rem;letter-spacing:.06em;transition:all .2s;background:rgba(26,86,219,.04)}
 .rc-link:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
-.rc-img{width:100px;flex-shrink:0;border:1px solid var(--border);overflow:hidden;background:var(--surface)}
-.rc-img img{width:100%;height:72px;object-fit:cover;display:block}
 
 /* SECTION COMMON */
 .sw{padding:5.5rem 3rem;max-width:1100px;margin:0 auto}
@@ -184,7 +180,7 @@ footer{padding:1.4rem 3rem;border-top:1.5px solid var(--border);display:flex;jus
 @keyframes fU{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 @keyframes fI{from{opacity:0}to{opacity:1}}
 
-@media(max-width:1024px){.hero-inner{grid-template-columns:1fr}.hero-research{display:none}}
+@media(max-width:900px){.rc-grid{grid-template-columns:1fr}.rc-img img{height:200px}}
 @media(max-width:860px){nav{padding:.85rem 1.4rem}.nav-links{gap:1.3rem}.sw{padding:4rem 1.4rem}.ag{grid-template-columns:1fr;gap:2rem}.about-card{order:-1}.sp-grid{grid-template-columns:1fr}footer{flex-direction:column;gap:.45rem;text-align:center}.pi-item{grid-template-columns:1fr;gap:.38rem}.lks{flex-direction:row;flex-wrap:wrap}}
 </style>
 </head>
@@ -205,76 +201,73 @@ footer{padding:1.4rem 3rem;border-top:1.5px solid var(--border);display:flex;jus
   <canvas id="canvas"></canvas>
   <div class="hero-inner">
 
-    <!-- Left: Name + info -->
-    <div>
-      <div class="hero-tag">Topological Photonics · Nanophotonics · Spin Photonics</div>
-      <div class="hero-name-block">
-        <h1>Tong<br><em>Fu</em></h1>
-        <div class="hero-cn">付 统</div>
+    <!-- Fu Group Banner -->
+    <div class="fg-banner">
+      <div class="fg-group"><span>Fu</span> Group</div>
+      <div class="fg-sub">Topological Photonics &nbsp;·&nbsp; Nanophotonics &nbsp;·&nbsp; Spin Photonics</div>
+      <div class="fg-meta">
+        Tong Fu (付统) &nbsp;·&nbsp; Postdoctoral Researcher, Dept. of Physics, City University of Hong Kong
+        &nbsp;·&nbsp; <a href="mailto:tongfu.physics@gmail.com">tongfu.physics@gmail.com</a>
       </div>
-      <p class="hero-title">Postdoctoral Researcher · <strong>Department of Physics</strong></p>
-      <p class="hero-affil"><span>City University of Hong Kong</span></p>
-      <p class="hero-idx">h-index: 14 · i10-index: 20 · ORCID: 0000-0001-7669-6903</p>
-      <div class="hero-btns">
+      <div class="fg-btns">
         <a href="#selected" class="btn bp">Selected Papers</a>
         <a href="https://scholar.google.com/citations?user=cmI1r9sAAAAJ" target="_blank" class="btn bo">Google Scholar</a>
+        <a href="#about" class="btn bo">About</a>
         <a href="#contact" class="btn bo">Contact</a>
       </div>
     </div>
 
-    <!-- Right: Research areas with paper links -->
-    <div class="hero-research">
-      <div class="hr-title">Research Areas</div>
-      <div class="rc-grid">
+    <!-- Research Areas — 3 columns, large images -->
+    <div class="rc-header">Research Areas</div>
+    <div class="rc-grid">
 
-        <div class="rc">
-          <div class="rc-top">
-            <div class="rc-num">01</div>
-            <div class="rc-body">
-              <h3>Topological Photonics</h3>
-              <p>Extending topological invariants — real-space spin Chern numbers, Euler characteristics, polarization singularities (C-lines) — from momentum-space band theory into electromagnetic near fields of finite nanostructures.</p>
-              <div class="rc-links">
-                <a href="https://doi.org/10.1103/PhysRevLett.132.233801" target="_blank" class="rc-link">Spin Chern Number · PRL 2024</a>
-                <a href="https://arxiv.org/abs/2407.16213" target="_blank" class="rc-link">Topological Dark Spots · ACS Photonics 2024</a>
-                <a href="https://arxiv.org/abs/2603.21883" target="_blank" class="rc-link">Flexural Waves · arXiv 2026</a>
-              </div>
-            </div>
-            <div class="rc-img"><img src="spinchernnumber_orig.png" alt="Spin Chern number torus"></div>
+      <div class="rc">
+        <div class="rc-img">
+          <img src="spinchernnumber_orig.png" alt="Spin Chern number on torus">
+        </div>
+        <div class="rc-content">
+          <div class="rc-num">01</div>
+          <h3>Topological Photonics</h3>
+          <p>Extending topological invariants — real-space spin Chern numbers, Euler characteristics, polarization singularities (C-lines) — from momentum-space band theory into electromagnetic near fields of finite nanostructures.</p>
+          <div class="rc-links">
+            <a href="https://doi.org/10.1103/PhysRevLett.132.233801" target="_blank" class="rc-link">Spin Chern Number · PRL 2024</a>
+            <a href="https://arxiv.org/abs/2407.16213" target="_blank" class="rc-link">Topological Dark Spots · ACS Photonics 2024</a>
+            <a href="https://arxiv.org/abs/2603.21883" target="_blank" class="rc-link">Flexural Waves · arXiv 2026</a>
           </div>
         </div>
-
-        <div class="rc">
-          <div class="rc-top">
-            <div class="rc-num">02</div>
-            <div class="rc-body">
-              <h3>Spin Photonics</h3>
-              <p>Transverse spin-orbit interactions of light in nanoscale environments: Berry phase of transverse spin in curved paths, analogous to the Dresselhaus effect. Directionality in plasmonic waveguides via spin-momentum locking.</p>
-              <div class="rc-links">
-                <a href="https://doi.org/10.1021/acs.nanolett.4c01931" target="_blank" class="rc-link">Transverse SOI · Nano Lett. 2024</a>
-                <a href="https://doi.org/10.1103/PhysRevLett.123.183903" target="_blank" class="rc-link">Chiral Raman · PRL 2019</a>
-              </div>
-            </div>
-            <div class="rc-img"><img src="TOC.png" alt="Transverse spin-orbit" style="object-position:left center"></div>
-          </div>
-        </div>
-
-        <div class="rc">
-          <div class="rc-top">
-            <div class="rc-num">03</div>
-            <div class="rc-body">
-              <h3>Nanophotonics</h3>
-              <p>Topological dark spots and C-lines in near fields of metallic nanostructures, chiral near-field enhancement for biosensing, and optical chirality control in graphene-based and plasmonic systems.</p>
-              <div class="rc-links">
-                <a href="https://arxiv.org/abs/2407.16213" target="_blank" class="rc-link">Dark Spots · ACS Photonics 2024</a>
-                <a href="https://doi.org/10.1364/OE.532514" target="_blank" class="rc-link">Chiral Sensing · OE 2024</a>
-                <a href="https://doi.org/10.1016/j.optcom.2021.127160" target="_blank" class="rc-link">Directional Coupler · OC 2021</a>
-              </div>
-            </div>
-            <div class="rc-img"><img src="TOC01.png" alt="C lines metal sphere" style="object-position:center 30%"></div>
-          </div>
-        </div>
-
       </div>
+
+      <div class="rc">
+        <div class="rc-img">
+          <img src="TOC.png" alt="Transverse spin-orbit interaction" style="object-position:left center">
+        </div>
+        <div class="rc-content">
+          <div class="rc-num">02</div>
+          <h3>Spin Photonics</h3>
+          <p>Transverse spin-orbit interactions of light in nanoscale environments: Berry phase of transverse spin in curved paths, analogous to the Dresselhaus effect. Directionality in plasmonic waveguides via spin-momentum locking.</p>
+          <div class="rc-links">
+            <a href="https://doi.org/10.1021/acs.nanolett.4c01931" target="_blank" class="rc-link">Transverse SOI · Nano Lett. 2024</a>
+            <a href="https://doi.org/10.1103/PhysRevLett.123.183903" target="_blank" class="rc-link">Chiral Raman · PRL 2019</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="rc">
+        <div class="rc-img">
+          <img src="TOC01.png" alt="Electric C lines near metal sphere" style="object-position:center 30%">
+        </div>
+        <div class="rc-content">
+          <div class="rc-num">03</div>
+          <h3>Nanophotonics</h3>
+          <p>Topological dark spots and C-lines in near fields of metallic nanostructures, chiral near-field enhancement for biosensing, and optical chirality control in graphene-based and plasmonic systems.</p>
+          <div class="rc-links">
+            <a href="https://arxiv.org/abs/2407.16213" target="_blank" class="rc-link">Dark Spots · ACS Photonics 2024</a>
+            <a href="https://doi.org/10.1364/OE.532514" target="_blank" class="rc-link">Chiral Sensing · OE 2024</a>
+            <a href="https://doi.org/10.1016/j.optcom.2021.127160" target="_blank" class="rc-link">Directional Coupler · OC 2021</a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
